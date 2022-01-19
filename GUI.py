@@ -8,10 +8,10 @@ root.geometry("600x400")
 
 ind = 0
 #wood, stone, coal, trees, swords, axes
-playerInventory = [10, 10, 10, 0, 10, 50]
+playerInventory = [0, 0, 0, 0, 0, 0]
 stats = 100
 chosen_envi = "Forest"
-unlockedstages = 3
+unlockedstages = 1
 
 higheststagelevel = 0
 newhighestcutscene = 0
@@ -602,10 +602,10 @@ def explore():
         test.kuya(playerInventory[4])
     if higheststagelevel < stagelevels:
         higheststagelevel = stagelevels
-        if higheststagelevel == 3:
+        if higheststagelevel == 5:
             test.back()
             changescreen(goArray, "ETalk")
-    if stagelevels == 2 and chosen_envi == "Cave":
+    if stagelevels == 5 and chosen_envi == "Cave":
         test.back()
         changescreen(goArray, "ETalk2")
     else:
